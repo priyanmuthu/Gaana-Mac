@@ -1,0 +1,32 @@
+{
+  "name": "Gaana",
+  "version": "0.0.2",
+  "description": "Gaana Mac App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "clean": "rm -rf build/*",
+    "pack": "electron-packager ./ --platform=darwin --arch=x64 --out=build --overwrite --icon=logo.icns",
+    "compress": "cd build/Saavn-darwin-x64/; 7z a Gaana.zip Gaana.app",
+    "install": "cp -r build/Gaana-darwin-x64/Gaana.app /Applications/Gaana.app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scriptspry/saavn-mac.git"
+  },
+  "keywords": [
+    "Gaana",
+    "Mac",
+    "App"
+  ],
+  "author": "ScriptSpry",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/scriptspry/saavn-mac/issues"
+  },
+  "homepage": "http://scriptspry.com/2016/07/30/saavn-mac-app.html",
+  "devDependencies": {
+    "electron-packager": "^8.2.0",
+    "electron-prebuilt": "^1.4.5"
+  }
+}
